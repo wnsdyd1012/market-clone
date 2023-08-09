@@ -24,17 +24,16 @@ const handleSubmit = async (event) => {
       method: "POST",
       body: formData,
     });
-    const data = await res.json();
-    if (data === "200") {
-      //   div.innerText = "회원가입에 성공했습니다!";
-      //   div.style.color = "blue";
-      alert("회원 가입에 성공했습니다.");
-      window.location.pathname = "/login.html";
-    }
-  } else {
-    div.innerText = "비밀번호가 일치하지 않습니다.";
-    div.style.color = "red";
-  }
+
+  //   const data = await res.json();
+  //   if (data === "200") {
+  //     alert("회원 가입에 성공했습니다.");
+  //     window.location.pathname = "/login.html";
+  //   }
+  // } else {
+  //   div.innerText = "비밀번호가 일치하지 않습니다.";
+  //   div.style.color = "red";
+  // }
 };
 
 form.addEventListener("submit", handleSubmit);
