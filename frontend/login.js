@@ -11,8 +11,10 @@ const handleSubmit = async (event) => {
     body: formData,
   });
   const data = await res.json();
+
   if (res.status === 200) {
     alert("로그인 성공!");
+    window.location.pathname = "/";
   } else if (res.status === 401) {
     alert("id 혹은 password가 틀렸습니다.");
   }
